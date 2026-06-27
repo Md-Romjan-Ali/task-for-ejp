@@ -3,16 +3,21 @@
 import { authClient } from "@/lib/auth-client";
 import { buyData } from "@/lib/post";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function HeroExpense() {
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
     const { data: session } = authClient.useSession()
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        const form = e.currentTarget
         if (!session) {
             router.push('/login')
             return;
         }
+        setLoading(true)
         const formData = new FormData(e.currentTarget)
         const datas = Object.fromEntries(formData.entries())
         const data = {
@@ -21,7 +26,11 @@ export default function HeroExpense() {
         }
         console.log(data);
         const buyDatas = await buyData(data)
+        toast.success('Thanks for buy this Product')
         console.log(buyDatas, 'from sectin');
+
+        setLoading(false)
+        form.reset()
     };
 
     return (
@@ -145,7 +154,10 @@ export default function HeroExpense() {
                                 type="submit"
                                 className="w-full mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-[0.99] rounded-lg shadow-md hover:shadow-lg focus:outline-none transition-all duration-150"
                             >
-                                Confirm
+                                {
+                                    loading ? 'Confrming...' : 'Confirm'
+                                }
+
                             </button>
                         </form>
                     </div>

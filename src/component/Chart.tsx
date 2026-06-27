@@ -1,8 +1,6 @@
 "use client"
 import { Pie, PieChart, PieSectorShapeProps, Sector, Tooltip, TooltipIndex } from 'recharts';
-import { generateMockData } from '@recharts/devtools';
 
-const data = generateMockData(4, 1000);
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 const PieGradient = (props: PieSectorShapeProps) => {
