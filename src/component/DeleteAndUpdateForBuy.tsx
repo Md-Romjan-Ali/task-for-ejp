@@ -1,7 +1,5 @@
 "use client"
 import { deleteData } from '@/lib/deletebuy';
-import { updateData } from '@/lib/update';
-import React from 'react';
 import { UpdateModal } from './UpdateModal';
 import { Button } from '@heroui/react';
 import { useRouter } from 'next/navigation';

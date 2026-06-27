@@ -5,9 +5,14 @@ import { auth } from "@/lib/auth";
 import { getBuyData } from "@/lib/getdata";
 import { headers } from "next/headers";
 
+interface props {
+    searchParams: {
+        category?: string
+    }
 
-export default async function ExpenseTable({ searchParams }) {
-    const params = await searchParams;
+}
+export default async function ExpenseTable({ searchParams }: props) {
+    const params = await searchParams
     console.log(params, 'from buy all');
 
     interface GetData {
@@ -25,7 +30,7 @@ export default async function ExpenseTable({ searchParams }) {
     if (!userId) {
         return;
     }
-    const getdata = await getBuyData(userId, params.category)
+    const getdata = await getBuyData(userId, params.category as string)
     console.log(getdata, 'from bu page');
     return (
         <div className="bg-gray-300 min-h-screen">

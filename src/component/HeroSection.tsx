@@ -11,6 +11,7 @@ export default function HeroExpense() {
         e.preventDefault();
         if (!session) {
             router.push('/login')
+            return;
         }
         const formData = new FormData(e.currentTarget)
         const datas = Object.fromEntries(formData.entries())
@@ -58,7 +59,7 @@ export default function HeroExpense() {
                 </div>
 
                 {/* Right Column: Dynamic Form Container */}
-                <div className="lg:col-span-6 w-full max-w-md mx-auto lg:max-w-none">
+                <div className="lg:col-span-6 w-full max-w-md mx-auto lg:max-w-md">
                     <div className="bg-white border border-slate-100 shadow-xl rounded-2xl p-6 sm:p-8">
                         <div className="mb-6">
                             <h2 className="text-xl font-bold text-slate-900">Add New Expense</h2>
@@ -144,8 +145,7 @@ export default function HeroExpense() {
                                 type="submit"
                                 className="w-full mt-2 inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-[0.99] rounded-lg shadow-md hover:shadow-lg focus:outline-none transition-all duration-150"
                             >
-
-                                Log Expense
+                                Confirm
                             </button>
                         </form>
                     </div>

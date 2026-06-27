@@ -38,15 +38,27 @@ export default function Navbar() {
                     >
                         Home
                     </Link>
-                    <Link
-                        href={`/buyProduct?category=`}
-                        className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-98 rounded-lg shadow-sm transition-all duration-200"
-                    >
-                        My Products
-                    </Link>
+                    {
+                        !session &&
+                        <Link
+                            href={`/login`}
+                            className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-98 rounded-lg shadow-sm transition-all duration-200"
+                        >
+                            Login
+                        </Link>
+                    }
                     {
                         session &&
-                        <Button onClick={logOutHandle} variant="danger-soft">Sign Out</Button>
+                        <div>
+                            <Link
+                                href={`/buyProduct?category=`}
+                                className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 active:scale-98 rounded-lg shadow-sm transition-all duration-200"
+                            >
+                                My Products
+                            </Link>
+                            <Button onClick={logOutHandle} variant="danger-soft">Sign Out</Button>
+                        </div>
+
                     }
                 </div>
                 {/* Mobile Hamburger Button */}

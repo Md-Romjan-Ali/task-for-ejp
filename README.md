@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js TypeScript Project
 
-## Getting Started
+A modern and responsive web application built with **Next.js**, **TypeScript**, **HeroUI**, **Tailwind CSS**, and **React Hot Toast**. The project focuses on providing a clean UI, reusable components, responsive layouts, and a smooth user experience.
 
-First, run the development server:
+##  Live Demo
+
+https://typescript-with-next.vercel.app
+
+## Client Repository
+
+https://github.com/Md-Romjan-Ali/task-for-ejp
+
+---
+
+##  Features
+
+- Responsive design for desktop, tablet, and mobile
+- Modern UI built with HeroUI
+- Fast performance with Next.js App Router
+- Type-safe development using TypeScript
+- Beautiful toast notifications using React Hot Toast
+- Reusable and modular component architecture
+- Optimized styling with Tailwind CSS
+- Clean and maintainable code structure
+
+---
+
+##  Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- HeroUI
+- React Hot Toast
+
+---
+
+##  Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Md-Romjan-Ali/task-for-ejp.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Starts the development server.
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Creates a production build.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run start
+```
+
+Starts the production server.
+
+```bash
+npm run lint
+```
+
+Runs ESLint.
+
+---
+
+##  Responsive Design
+
+The application is optimized for:
+
+- Mobile Devices
+- Tablets
+- Desktop Screens
+
+---
+
+## Deployment
+
+The application is deployed on **Vercel**.
+
+Live URL:
+
+https://typescript-with-next.vercel.app
+
+---
+
+## Future Improvements
+
+- Authentication
+- Dark Mode
+- API Integration
+- Dashboard Analytics
+- Performance Optimization
+- Unit Testing
+
+---
+
+## Author
+
+MD ROMJAN ALI
+
+GitHub:
+https://github.com/Md-Romjan-Ali
