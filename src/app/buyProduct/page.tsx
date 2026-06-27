@@ -1,4 +1,5 @@
 
+import PieWithGradient from "@/component/Chart";
 import DeleteAndUpdateForBuy from "@/component/DeleteAndUpdateForBuy";
 import { SearchSection } from "@/component/SearchSection";
 import { auth } from "@/lib/auth";
@@ -34,9 +35,13 @@ export default async function ExpenseTable({ searchParams }: props) {
     console.log(getdata, 'from bu page');
     return (
         <div className="bg-gray-300 min-h-screen">
+            <div className="md:flex gap-2 mt-10 mb-4 max-w-4xl items-center md:h-40 mx-auto">
+                <PieWithGradient getdata={getdata} />
+                <SearchSection />
+            </div>
             <div className="overflow-x-auto max-w-4xl mx-auto m-6 rounded-lg border border-gray-200 shadow-md">
 
-                <SearchSection />
+
                 <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
                     <thead className="bg-gray-50">
                         <tr className="text-lg">
