@@ -99,13 +99,17 @@ export default function Navbar() {
                     >
                         Home
                     </Link>
-                    <Link
-                        href="/buy"
-                        onClick={() => setIsOpen(false)}
-                        className="w-full text-center py-3 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors"
-                    >
-                        Buy Now
-                    </Link>
+                    {
+                        session &&
+                        <Link
+                            href="/buyProduct"
+                            onClick={() => setIsOpen(false)}
+                            className="w-full text-center py-3 text-base font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-colors"
+                        >
+                            My Product
+                        </Link>
+                    }
+
                 </div>
             </div>
         </nav>

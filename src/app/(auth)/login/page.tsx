@@ -90,7 +90,7 @@ const LoginPage = () => {
                                     Login in...
                                 </span>
                             ) : (
-                                "Register"
+                                "Login"
                             )}
                         </button>
                     </form>

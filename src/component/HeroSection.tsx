@@ -1,6 +1,7 @@
 'use client';
 
 import { authClient } from "@/lib/auth-client";
+import { sendEmail } from "@/lib/nodemailer";
 import { buyData } from "@/lib/post";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -26,11 +27,14 @@ export default function HeroExpense() {
         }
         console.log(data);
         const buyDatas = await buyData(data)
-        toast.success('Thanks for buy this Product')
-        console.log(buyDatas, 'from sectin');
 
+
+        console.log(buyDatas, 'from hero section first data second email');
+        toast.success('Thanks for buy this Product')
         setLoading(false)
+
         form.reset()
+        await sendEmail(session?.user)
     };
 
     return (
